@@ -1,6 +1,6 @@
 # Junior learning path
 
-This project is a tiny laboratory for professional Python ML repository habits. The data functions are intentionally ordinary. The valuable part is the repeatable path from a code change to a trustworthy merge.
+This project is a tiny laboratory for professional Python ML repository habits.
 
 ## The complete flow
 

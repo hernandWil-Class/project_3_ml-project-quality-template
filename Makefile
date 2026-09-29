@@ -1,7 +1,11 @@
-.PHONY: install test lint format type check security clean clean-all
+.PHONY: install hooks-install test lint format type check security clean clean-all
 
 install:
 	uv sync
+
+hooks-install:
+	uv tool install "pre-commit>=3.8,<5.0"
+	"$(shell uv tool dir --bin)/pre-commit" install --hook-type pre-commit --hook-type post-commit
 
 test:
 	uv run pytest --cov=ml_template --cov-report=term-missing

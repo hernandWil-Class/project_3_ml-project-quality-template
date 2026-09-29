@@ -69,13 +69,13 @@ uv run mypy src tests
 
 Pre-commit is a tool that Git runs automatically just before it records a commit. In this project, the hooks run Ruff lint with safe fixes, Ruff formatting, and mypy on the files being committed. If a hook reports a problem or changes a file, the commit pauses; review the change, stage it with `git add` again, and retry the commit.
 
-After installing the project tools with `make install`, activate the hooks once in this clone of the repository:
+Install the Git hooks once in this clone of the repository with:
 
 ```bash
-uv run pre-commit install
+make hooks-install
 ```
 
-This sets up Git to call Pre-commit before each commit. To run the hooks manually on every tracked file instead, use `uv run pre-commit run --all-files`. Pre-commit is a local early check; GitHub Actions still runs its own checks after you push.
+This installs Pre-commit as a uv tool outside the project `.venv`, then sets up Git to call the checks before a commit and cleanup after a successful commit. The post-commit hook runs `make clean-all`, which removes generated files and `.venv`; run `make install` afterward to restore the project environment. To run the checks manually on every tracked file, use `uv run pre-commit run --all-files`. Pre-commit is a local early check; GitHub Actions still runs its own checks after you push.
 
 ## CI quality gate
 

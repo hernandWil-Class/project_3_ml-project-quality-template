@@ -11,3 +11,12 @@ repos:
       - id: mypy
         additional_dependencies:
           - pandas-stubs
+  - repo: local
+    hooks:
+      - id: clean-after-commit
+        name: Clean project environment after commit
+        entry: make clean-all
+        language: system
+        always_run: true
+        pass_filenames: false
+        stages: [post-commit]
