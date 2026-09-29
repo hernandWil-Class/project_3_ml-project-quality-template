@@ -1,4 +1,4 @@
-.PHONY: install test lint format type check security clean
+.PHONY: install test lint format type check security clean clean-all
 
 install:
 	uv sync
@@ -26,3 +26,6 @@ security:
 
 clean:
 	rm -rf .coverage .pytest_cache .mypy_cache .ruff_cache dist build *.egg-info
+
+clean-all: clean
+	rm -rf .venv

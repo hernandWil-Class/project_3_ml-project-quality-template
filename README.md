@@ -11,7 +11,18 @@ make install
 make check
 ```
 
-The recommended reading order is in [junior_learning_path.md](junior_learning_path.md). The package is intentionally simple: the important artifact is the quality system around it.
+The package is intentionally simple: the important artifact is the quality system around it. Use the roadmap below to work through the learning materials in order.
+
+## Learning roadmap
+
+These files have different jobs; they are not four books to read from beginning to end:
+
+1. **Start with [junior_learning_path.md](junior_learning_path.md).** Follow its numbered reading order to learn the project pieces and how a change moves from your computer through checks and into CI.
+2. **Practice with the Junior section of [exercises.md](exercises.md).** Do these after the matching topic in the learning path. Make one small change, run the command, observe the result, and write down what you learned. The Intermediate and Senior/staff sections are later challenges, not prerequisites for getting started.
+3. **Use [debugging_scenarios.md](debugging_scenarios.md) when something fails.** This is a troubleshooting reference, not a stage you must finish in order. Pick the scenario that matches the error, then investigate it using the hints.
+4. **Use [interview_questions.md](interview_questions.md) to check your understanding.** Try answering without looking at the code, and include an example from this project. Questions 1–9 review core concepts; questions 10–18 are stretch topics about larger systems and operational decisions.
+
+In short: **Quick start (this README instructions) → learning path → Junior exercises → interview questions 1–9.** Use debugging scenarios whenever you get stuck. After the basics feel familiar, move to the Intermediate exercises and remaining interview questions, then try the Senior/staff exercises.
 
 ## Commands
 
